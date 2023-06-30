@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+ 
+    />
+  </head>
+  <body>
+    <main>
+      <section class="navigation">
+        <div class="container nav-bar">
+          <ul>
+            <li class="head-nav">
+              <a href="">
+                <span class="icon"
+                  ><i class="fab fa-odnoklassniki fa-lg"></i
+                ></span>
+                <span class="title">Yoruba <span>Aloud</span></span>
+              </a>
+            </li>
+
+            <li id="list">
+              <a href="">
+                <span class="icon"><i class="bx bx-home"></i></span>
+                <span class="title">Dashboard</span>
+              </a>
+            </li>
+
+            <li id="list">
+              <a href="">
+                <span class="icon"><i class="bx bx-category"></i></span>
+                <span class="title">Catergories</span>
+              </a>
+            </li>
+
+            <li id="list">
+              <a href="">
+                <span class="icon"><i class="bx bx-book-content"></i></span>
+                <span id="learnMat" class="title">Learning Materials</span>
+              </a>
+            </li>
+
+            <li id="list">
+              <a href="">
+                <span class="icon"><i class="bx bx-certification"></i></span>
+                <span class="title">Quiz</span>
+              </a>
+            </li>
+
+            <li id="list">
+              <a href="">
+                <span class="icon"><i class="bx bxs-id-card"></i></span>
+                <span class="title">Admin Profile</span>
+              </a>
+            </li>
+
+            <li id="list">
+              <a href="">
+                <span class="icon"><i class="bx bxs-log-out-circle"></i></span>
+                <span class="title">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="main">
+        <div class="container">
+          <div class="sec-header">
+            <i class="bx bx-menu"></i>
+
+            <h3 id="adminUsername"></h3>
+          </div>
+
+          <div class="grid">
+            <div>
+              <i class="bx bx-library"></i>
+
+              <p>Total Catergories</p>
+
+              <span id="category"></span>
+            </div>
+            <div>
+              <i class="bx bx-book-content"></i>
+
+              <p>Learning Materials</p>
+
+              <span id="learningMaterials"></span>
+            </div>
+            <div>
+              <i class="bx bx-library"></i>
+
+              <p>Total Sub-Catergories</p>
+
+              <span id="subCategories"></span>
+            </div>
+            <div>
+              <i class="bx bx-certification"></i>
+
+              <p>Total Quiz</p>
+
+              <span id="totalQuiz"></span>
+            </div>
+            <div>
+              <i class="bx bxs-graduation"></i>
+
+              <p>Total Students</p>
+
+              <span id="totalStudents"></span>
+            </div>
+            <div>
+              <button id="topThreeStudent">Top Three Students</button>
+            </div>
+          </div>
+
+          <!-- //Page modal -->
+          <div id="pageModal" class="page-modal">
+            <div class="loader"></div>
+          </div>
+
+          <!-- //Student Modal -->
+          <div id="studentModal" class="student-modal">
+            <div id="studentModalTitle" class="student-modal-title">
+              <span>Top Three Students</span>
+              <i class="bx bx-x" onclick="closeStudentModal()"></i>
+            </div>
+            <div id="topThreeScores"></div>
+          </div>
+
+          <!-- //All Students Table -->
+          <div class="table" id="table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone Number</th>
+                  <th>Position</th>
+                  <th>Total Score</th>
+                </tr>
+              </thead>
+              <tbody id="allStudents"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- SCRIPT  -->
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
